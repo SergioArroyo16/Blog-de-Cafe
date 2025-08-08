@@ -1,0 +1,295 @@
+/* Variables */
+
+:root {
+
+    /* fuentes */
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    /* colores */
+    --primario: #767676;
+    --primarioClaro: #9d9d9d;
+    --primarioOscuro: #606060;
+    --primarioHover: #2c3132;
+    --secundario: #e36e00;
+    --secundarioClaro: #ff8410;
+    --secundarioOscuro: #ae6a2a;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: rgb(70, 70, 70);
+    --grisClaro: rgb(242, 242, 242);
+    --grisOscuro: rgb(35, 35, 35);
+}
+
+/* Box model */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+
+/* GLOBALES */
+body {
+    font-family: var(--fuenteParrafos);
+    /*Fuente de los párafos del todo la página*/
+    font-size: 16px;
+    /*1rem = 10px*/
+    line-height: 2;
+    /* Interlineado */
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
+}
+
+/* GLOBALES */
+body {
+    font-family: var(--fuenteParrafos);/*Fuente de los párafos del todo la página*/
+    font-size: 16px;                /*1rem = 10px*/
+    line-height: 2;                 /* Interlineado */
+}
+
+.fondo {
+    background-image: url(../img/ubuntu-15-vivid-vervet-greyscale_4096x2304_xtrafondos.com\(1\).jpg);
+    background-repeat: no-repeat;           /*Se nula la repetición de la imagen que es por default*/
+    background-size: cover;                 /*Con "cover" se ajusta la imagen a los bordes laterales del navegador*/
+    height: 75rem;                          /*Altura de la imagen*/
+    position: relative;                     /*La imagen ahora es el Box Model Padre*/
+
+}
+
+.contenedor {
+    /* max-width: 120rem; */
+    /* width: 90%; */
+    width: min(90% , 120rem);           /* Toma el mínimo de ancho en cualquiera de los dos parámetros. */
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+        /* Encabezados */
+h1, h2, h3, h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+/* Utilidades */
+
+.centrarConten{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-margin {
+    margin:0;
+}
+
+.no-padding {
+    padding:0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.fondo-oscuro {
+    background-color: rgba(0, 0, 0, 0.424);
+}
+
+.justificar-texto {
+    text-align: justify;
+}
+
+.boton {
+    background-color: var(--primario);
+    display: block;
+    font-family:var(--fuenteHeading);
+    text-align: center;
+    padding: 1.3rem 3rem;
+    color: var(--blanco);
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--negro);
+}
+/* Encabezado */
+
+
+.contenedorLogo {
+    width: auto;
+    height: 10rem;
+    align-self: center;
+    justify-self: center;
+}
+
+.contenidoLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.centrarLogo {
+    height: 10rem;
+    display: flex;
+    color: var(--secundario);
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+.imagen_logo {
+    width: auto;
+    height: auto;
+    max-width: 10rem;
+    max-height: 10em;
+}
+
+.centrarLogo span {
+    color: var(--secundarioOscuro);
+    font-size: 5rem;
+}
+
+.encabezado__titulo {
+    color: var(--blanco);
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0 2rem 0;
+}
+
+/* Contenido */
+
+.contenedorPrincipalLogin{
+    height: auto;
+    width: auto;
+    display: grid;
+    margin-bottom: 5rem;
+}
+
+.paraCentrarLog {
+    justify-self: center;
+    align-self: center;
+}
+
+.nombrePrincipal{
+    color:var(--blanco);
+    margin: 4rem 0 3rem 0;
+    font-size: 10rem;
+
+}
+
+.contenedor__imagen{
+    background-image: url(../img/OS93KS0.jpg); /*Imagen insertada en el div*/
+    background-repeat: no-repeat;           /*Se nula la repetición de la imagen que es por default*/
+    background-size: cover;                 /*Con "cover" se ajusta la imagen a los bordes laterales del navegador*/
+    width: auto;
+    height: auto;                          /*Altura de la imagen*/
+    position: relative;                     /*La imagen ahora es el Box Model Padre*/
+}
+
+.ContenedorSesion {
+    padding: .7rem 4rem;
+    width: 50rem;
+    background-color: #000000ca;
+}
+
+
+.formulario {
+    width: 100%;
+    padding: 0rem 5rem;
+}
+
+.formulario__bienvenida{
+    color: var(--blanco);
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0rem;
+}
+
+.campo {
+    margin-top: 1.5rem;
+    display: flex;
+    margin-bottom: 1.2rem;
+    font-family: var(--fuenteParrafos);
+    justify-content:space-evenly;
+}
+
+.campo__registro {
+    margin: 0rem;
+    display: flex;
+    font-family: var(--fuenteParrafos);
+    justify-content:space-evenly;
+}
+
+.campo__entrada {
+    border-radius: .5rem;
+}
+
+.campo__label {
+    color: var(--blanco);
+    font-size: 1.7rem;
+    flex: 0 0 9rem;
+    font-family: var(--fuenteParrafos);
+}
+
+.contenidoInicio__registro__boton {
+    border: .2rem solid #e17611;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: none;
+    padding: .8rem 2rem;
+    color: var(--secundarioClaro);
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.contenidoInicio__registro__boton:hover{
+    color: var(--blanco);
+    background-color: var(--secundario);
+}
+
+.footer {
+    text-align: center;
+    font-size: 1.5rem;
+}

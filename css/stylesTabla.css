@@ -1,0 +1,310 @@
+/* Variables */
+
+:root {
+
+    /* fuentes */
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    /* colores */
+    --primario: #767676;
+    --primarioClaro: #9d9d9d;
+    --primarioOscuro: #606060;
+    --primarioHover: #2c3132;
+    --secundario: #e36e00;
+    --secundarioClaro: #ff8410;
+    --secundarioOscuro: #ae6a2a;
+    --blanco: #fff;
+    --negro: #000;
+    --gris: rgb(70, 70, 70);
+    --grisClaro: rgb(242, 242, 242);
+    --grisOscuro: rgb(35, 35, 35);
+}
+
+/* Box model */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+
+/* GLOBALES */
+body {
+    font-family: var(--fuenteParrafos);
+    /*Fuente de los párafos del todo la página*/
+    font-size: 16px;
+    /*1rem = 10px*/
+    line-height: 2;
+    /* Interlineado */
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
+}
+
+/* GLOBALES */
+body {
+    font-family: var(--fuenteParrafos);
+    /*Fuente de los párafos del todo la página*/
+    font-size: 16px;
+    /*1rem = 10px*/
+    line-height: 2;
+    /* Interlineado */
+}
+
+.fondo {
+    background-image: url(../img/ubuntu-15-vivid-vervet-greyscale_4096x2304_xtrafondos.com\(1\).jpg);
+    background-repeat: no-repeat;
+    /*Se nula la repetición de la imagen que es por default*/
+    background-size: cover;
+    /*Con "cover" se ajusta la imagen a los bordes laterales del navegador*/
+    height: 75rem;
+    /*Altura de la imagen*/
+    position: relative;
+    /*La imagen ahora es el Box Model Padre*/
+
+}
+
+.contenedor {
+    /* max-width: 120rem; */
+    /* width: 90%; */
+    width: min(90%, 120rem);
+    /* Toma el mínimo de ancho en cualquiera de los dos parámetros. */
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Encabezados */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+/* Utilidades */
+
+.centrarConten {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.fondo-oscuro {
+    background-color: rgba(0, 0, 0, 0.424);
+}
+
+.justificar-texto {
+    text-align: justify;
+}
+
+.boton {
+    background-color: var(--primario);
+    display: block;
+    font-family: var(--fuenteHeading);
+    text-align: center;
+    padding: 1.3rem 3rem;
+    color: var(--blanco);
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--negro);
+}
+
+/* Logo */
+
+.contenedorLogo {
+    width: auto;
+    height: 10rem;
+    align-self: center;
+    justify-self: center;
+    margin-left: 4rem;
+}
+
+.contenidoLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.centrarLogo {
+    height: 10rem;
+    display: flex;
+    color: var(--secundario);
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+.imagen_logo {
+    width: auto;
+    height: auto;
+    max-width: 10rem;
+    max-height: 10em;
+}
+
+.centrarLogo span {
+    color: var(--secundarioOscuro);
+    font-size: 5rem;
+}
+
+/* Encabezado */
+
+.barra__contenido {
+    width: 100%;
+    height: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr;
+}
+
+.contenedorCerrar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navegacion__enlace {
+    color: var(--primarioOscuro);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Titulo y botón agregar */
+
+.contenedorBoton {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.contenedorBoton__titulo {
+    margin-left: 3rem;
+}
+
+.contenedorBoton__boton--content {
+    color: var(--blanco);
+    padding: .5rem 1rem .5rem 3rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: rgb(13, 125, 205);
+    border: none;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contenedorBoton__boton--content:hover {
+    background-color: rgba(18, 105, 146, 0.964);
+}
+
+.main {
+    background-image: url(../img/4847243.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100rem;
+    position: relative;
+}
+
+.tabla {
+    margin-left: 3rem;
+    width: 85%;
+}
+
+.tabla__encabezados {
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.tabla__encabezados--contenido {
+    background-color: var(--primarioOscuro);
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+
+
+
+.tabla__renglones--contenidoID {
+    background-color: #dfdfdfd4;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tabla__renglones--contenido {
+    background-color: #ebebeb64;
+    text-align: center;
+    border-bottom: .1rem solid #2c313220;
+}
+
+.tabla--accionesEditar,
+.tabla--accionesBorrar {
+    width: 2rem;
+    height: auto;
+}
+
+.tabla--accionesEditar:hover,
+.tabla--accionesBorrar:hover {
+    border-radius: 1rem;
+}
+
+.tabla--accionesEditar:hover{
+    background-color: #d6863c16;
+}
+
+.tabla--accionesBorrar:hover {
+    background-color: rgba(215, 0, 0, 0.074);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: 1.5rem;
+}
